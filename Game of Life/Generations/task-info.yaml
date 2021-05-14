@@ -188,6 +188,31 @@ files:
         }
     }
   learner_created: false
+- name: src/life/Cell.java
+  visible: true
+  text: |
+    package life;
+
+    import java.util.Random;
+
+    public class Cell {
+        private boolean state;
+
+        public Cell(boolean state){
+            this.state = state;
+        }
+
+        public String getState(){
+            if (state){
+                return "O";
+            }
+            return " ";
+        }
+    }
+  learner_created: true
+- name: src/life/GameOfLife.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/54/stages/295/implement#comment
 status: Unchecked
 record: -1
