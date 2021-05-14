@@ -9,6 +9,10 @@ public class Cell {
         this.state = state;
     }
 
+    public void setState(boolean state){
+        this.state = state;
+    }
+
     public String getState(){
         if (state){
             return "O";
