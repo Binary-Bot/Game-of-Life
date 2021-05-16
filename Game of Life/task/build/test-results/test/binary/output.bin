@@ -1,188 +1,149 @@
 [1;31m
 Start test 1[0m
-> 4 4
+> 4 4 0
 OOOO
 O O 
    O
 OOO 
 [1;31m
 Start test 2[0m
-> 4 120
-OO  
-O  O
- OO 
- O  
+	> 8 1 10
+
+ O  OO  
+
+OO   OO 
+
+O     O 
+
+        
+
+  O     
+
+  O O   
+
+     OO 
+
+O   OO O
 [1;31m
 Start test 3[0m
-> 10 10
-O    O  O 
- OOOO   O 
- O   OO O 
-OO OO  OO 
-   O      
-OO OOOOOOO
-OO O O  OO
-    O O  O
-OO       O
-OOOO    O 
+> 10 10 100
+          
+          
+    O     
+   O O    
+    O     
+          
+          
+          
+          
+          
 [1;31m
 Start test 4[0m
-> 50 0
-4OO OO O OO   OOOO O      O  O OO  O   OOOO OOOOOO 
-4O OOOO O  O OOO      O O O OOOOOOOO     O   O OOOO
-4  O OO O OO OOO O   O OOO OO    O OOOOOO   O      
-4O O OOOO   OOO     O OOO O OO O  OOOOOO  OO   O O 
-4   OO    OOOOOO  O  O  O O  OO    O  O  O OOOOO O 
-4 OOOO O  OOOO OOO O  OO    OO OO OO  O  OO OO O O 
-4 O O  O         O  O OOOOO OOO   OOO OO O OO  O OO
-4  O  O OOO O   O OOOOO  O       OO  OOOOO    O OOO
-4   OO O O     OOO  O    OOO     O OOOOO  O OOOO  O
-4OOOOOOOO O O  OOO O  OO OO   OO      O   O  O    O
-4 OOO O  OOO   O O O    OOO   OOO OOO       O O OOO
-4OO OO  O  O O  O OO   O OO OO OOOO O     O   O O O
-4OOO  OO  OO  OO    OO      OOO OO OOO    O   OO OO
-4O OO    OO O OO OO O   O  OOO    OO    OO  OO  OOO
-4O  O  O  O O OO   O  OOOO OOO         OOOOO O O OO
-4      OOOO  O  O OOOO  O OOOOOOO O  OO  O  OOO OOO
-4OOO O   OO  O O    OO OO OO  O O OO OO  OO OO    O
-4O OOO   OOOO    O  O  O      O   O O  O   OOOOO OO
-4   O OOO OO  O  OO  O  O  O  O  OOO O     OOO   OO
-4  OO OOOOO OOOOOOO  O         OO OO  OO      OOO  
-4  O   OOOOO  OO O OOO O O O     OO   O O  OO  OOO 
-4 O O    OOOOO OOOO OO   O  O O     O   O OOO O OO 
-4 OO  OO O    OO    O  OO  O OOOO O      O OOO OOO 
-4OO OOOOOOO O    OO  O  O OO O OO O     OOOOOO  O O
-4   OO  OO OO   O  O  O  O OO  O  O  O  O O   OO  O
-4O  OO O  OO   OOO  OOOO  OO  OO OO  O   O OO    O 
-4OO O OOO    OOOO     O     O  OOOOO  O     OOOO   
-4  O O OOO   OOO O  OOO O OOO   O     O OOOOO  OO O
-4  OOOO     OOOOOOOO    O O  OOO    O OOO O OOOO OO
-4 O  OOOOO   OOO    OOOOOO OOOO   O O OOOOOOO     O
-4O  OO OO OO O  OOOOO    O OOO  OOO O   O  OOO OO O
-4 OO OOO  OOO    O OOO OOO O OOO    O O  OO  O OO  
-4OO     O  OO OOO   OOOO    OOOO O O OOOO OO   O O 
-4O OOOO O  OO   OO O  O    O     O   O   OO OOOOOO 
-4 OO O OOO    O  OOOO OOO    O O O     O   OO  OOO 
-4O   O OOOOOOOO  O OO O   OOO  OOO  O   O   O O  O 
-4O     OOO  O   O  OOOOOOO  OOOO OOO O OOOO    O  O
-4O          OO O  O  O  OO O    OO O  O    OOOOOOOO
-4O  OO O   OO   O       OO  OOOO OO OO OO  OOO OOOO
-4 O    O OO O OO     O   O    OO OO O  OOOOOOOOO O 
-4 O     OOO    OO O     O   O     OOO OOO OOOOOO   
-4OOO OO O    O    O O  OOOO O O O O OO OOO OO O   O
-4OOOOO OO   OOOO  OO O OO OO  O   O O  O   OOO     
-4  OOO O    O     O     O    O  O  OO  OOO O  O O  
-4 OOO O O OOOOOOOOOO O  O  OO      OOO O O O OO OOO
-4  OO    O  OO      OO   O OOO    OOO  OOO OOO   O 
-4OOOO OO OO OO OOOOOO  OOOO  OOOOOOOOO OO     OO O 
-4O OO  O  O O  O OOO    OOOO    OO OOOOOOO  OOO    
-4 OOOOO O OO O  O  OO   O OOOO OO O OO OOOOOOOOO  O
-4 O OOO OOO O  OO    O  O       OO O      OOO OO O 
+	> 4 4 10
+    
+    
+    
+    
 [1;31m
 Start test 5[0m
 
-> 50 2018
-4O  O    OOOO OOOO OOO O OO  O  O OO OOOO  OO O    
-4O   OO OOO OO  O O  O  O  OO OOOO  OO   O         
-4O   O O   OOOO O       O OOO  O       O    O O   O
-4OOO OOO  O O O   O O O    O OOOOO  O O  O O  O O  
-4      OO O  O O O O   O  O  O O O O    OO   O OOOO
-4 OO O OOO O   O OOO O OO  OOO O   OOO OOO OOOO   O
-4 OOO OOO OO  OOO O     OOO O  OOOO  O OO O  O OOO 
-4 O    O  OO  OOOO O O  O O    O  O O     OO      O
-4    OO OOOO    OOOO O OO  OO OOO  O  OOOO OOO OOOO
-4  OO OO OO O O    O O O    OOO  O   O O   OOOOOOOO
-4  O O   OOO     OO   OO    O  O O O   OO    O OOOO
-4  OOOOO OO     O O OO OO      O OO OOO O   OO O   
-4 OOO O  OO  O OOO O OO  O OO O  O OO OO  OOO O  OO
-4O O O O  O OOO O  OO    O O O  OO    OO OO O      
-4 O O   OOOOO O  O  O OO      O  OOO O  OO  OOOOOO 
-4   O    O   O O   OOO O OO OOO OO     O O  O  OOOO
-4O    OO OO  O    OOOO  OO   O O  O OOO  OOOO     O
-4  O  OOO   O O  O  O O  OOOO   O OO    O OO  O  O 
-4  O OOO OO  OOO    OOOOOOO  O  OOOOOO O O     OOOO
-4 O  OO   OO OOOO OOO  OOOOOOO        O  O   OOO  O
-4OOOOO OOOO OO  O O O  O OO    O   O  OO OOO OO O  
-4 O O O OO OO OOOOO  OO  OOO OOOOOO OO  OOO OO O   
-4 OOO O  OO   O  OOOO  O OO     OOOO  O O  OO OOOO 
-4OOOOO OOOO OOOOOOOO  O OOOOO    O   OOO OO OOOOOO 
-4O   O O O  O      OO     OOOO    OOO   O  OOO   OO
-4    O    O  OO  O  O   OOOOO O O    O OOO   O   O 
-4 OO OOO O      OOOOO  OOOOO OO OO OOO  OOO O O    
-4O  OOOOOOO   O OO OO OOOO  OOOOO  O  OOOO  O OOO  
-4OOO    OO    OO OOOO OO   O O O OO  OOOO  OOO     
-4OO    O  OO  O O OOOO O O  OO OO O          OO  O 
-4O  O OO O O    OO    OOO OO OO   OO  O  OO O OO OO
-4     OO     O OO    OOO   OO O OO OO    O O O OO  
-4O   OOO OO  O OO   O   OO     O OOOO  O OO OOO  O 
-4 OOOO     O O O   OO OOOO OOOO O O  O  O O  O OO  
-4OO OOOO O O  O    O  O OOO  OO  O O  OO  OO OOOOOO
-4OOOOOOO OO   O     O   OOOO    O   O   O O O OO   
-4 OOOOOOOO  OO O     O OO O  O O  O O O  O  OO O  O
-4O  O OO OO OOOOO O OO OO   OOOOOO OOO OO       O  
-4OOO OO   O OOOO     O OO   O O  OOO O      O OO  O
-4O       O OOO O O  OOOO OO  O O  OOOOO  OOO O OOO 
-4O O    O  O  O O O   O OO   OO OO  O OOOOOOOOO  OO
-4 OO  OO   O     OO O OO  O   O  OOOOO  O     O  O 
-4O  OOO OO   O  O  OOO OO O     O   O  O   O   O  O
-4O OOO OOO OO OO O OO OO O O O O O O   OOO OOO  OO 
-4 OO  O  O  O OOO O OOO   O  O  OO OOOOO OOO  OOO O
-4 OO    OO  OO OOO    O  O  OO OO OOO O O OOO   O  
-4OOO OOOO OOO   OO OO   OOOO      O  O   OO O    OO
-4 OO OO O  O  OO  O OOOO  OO O OOO  OOO O  O OOO  O
-4OOO OO   OOO OOOOO   OOOO O OOOO OO O  O   OO   O 
-4 O   OOOOOO  O   O OOO OOO O  OOO   OO   O  OO O  
+> 32 -1 0
+"   OOO  O O    OOOOOO O O     OO
+"   OO O    OO  O  O   O    O  OO
+" O OOO OOO  OO  OO  O O  OO  O  
+" O O O O    O     OO O    OO OOO
+" O O O    O OOOOO OOOOOOOOO O OO
+"O OOOO  O OOO OOOO O  O   OOO O 
+"O  OO  O  O     O O OOOOOOOOO O 
+"     OO OO  O OOO   OOOOO OOOOOO
+"  O OO        O O    O     OOOO 
+"OOOO  OO  OO    O O   OO OOOO  O
+"   O         O   O   OOOOOO    O
+"   OOOOO   OOOOOOO  O O  O OO O 
+" O O  OOO O O O  OO OO   OO    O
+"O    O OOOOO O    OO  OO O  OOO 
+" OOOOO   O O      O  O  O  OOOOO
+"OOO O  OOOO OOO OO  O OO    OO  
+"  OOO  OO  OO  O OOO     O O  OO
+"OOO  OOOOOOO OOO  OO  O  O   OO 
+"OO O O    OOO    O O  O OOOO O  
+"O O   OO  O     O  O O  O O O   
+"OOO       OOOO OOO O    OOOO  OO
+"O  OO  OOO     OOOO  O    O  O O
+"  O OO  O OO  OOOOO  O   O OOO  
+"O    OO O   O   OO O   O O OOOO 
+" O OOO O OOOOOO O   O O  O  OOO 
+" OO OOO  O O O  OO OOOOOOOOO  O 
+" OOO OO  OO O O   OO  OOOO OOO  
+" O O O  O OOO O  OO OO   O    OO
+"OO O O OOO OO O     OO  O  O O  
+" O O O O OO     OOOOO O   O  OOO
+"OOOOO     OO   O    O    OO    O
+" OOO OO  O   O OO  OO   OO   O  
 [1;31m
 Start test 6[0m
-
-> 50 -128
-4 OOOO     O    OO O  O   O   O OO O OOO  O    OOO 
-4 O O O O OOOOO  O O O OO OOOO OOO  OOO O    OOOO  
-4  OO O OO  O  O    OO    O O  O OO   O O    OOO  O
-4OO   OOOO   OO OO O O O   OOO O O O O OOOO OOO OOO
-4O O OO O  OO   O   O   O  OOOO    O  OO   O  O O O
-4OO OO   O OOOOOO OOO  O OO    OOO     OOO OO O  OO
-4  O   OOO   O O   O  OOO O O  O O  O OO OOOOOOO OO
-4  OO OOOOOO OO   OOO OOOOOOOOOOO OO  OO   OOOO O  
-4OOO OO OOO       O    O O   O O  OOO   O    O OOO 
-4OOOOO O OO OO  O OOO  OO  OOOOOO O O O    OO O OOO
-4O OOO O O     OO  OO OOOO  OO OOO O   OO   OOOO OO
-4OO OOOO  OO OO  O      O O        O  OOOO O OOO   
-4OOOOOOOO  OO OOOO  O O O O  OO  O OOOO O OOO O OOO
-4O  OO  OO   O  OO  O OOO  O OOOOOOO   OO OOO   OOO
-4 O O O O O  OOOOO OOO  OOOOOO OOOO   OOO  OO  OO O
-4OO O O OOOO    O O O  O O   OO   OO O OOO  OO   OO
-4OO   O  O    O       OOOO  OOO  OOO    OOO O  O  O
-4OO  O OOO OOOO   O O OOOOO  O O    O  OO  O  OOOO 
-4O OO O OO OO O O    O  O O OO  O  O O      OOOO O 
-4OOOO  OOOOOOOOOOOO OO OO O OO   OO O O OOO   O OO 
-4   OO  OO O OOOOO OOO    O OO OO   OO  OO OO   O O
-4 OOO  O    OOO OOOOOO   O    OOO OO    OOO O   O O
-4O O OOO  OO   OO O   OO  O OOOO  OO    O  OOO O   
-4   O O   O   OOOO  OO OO OO OOOO    O OOOO   OO   
-4O  OO O      OO   O O    O   OOOOO O O OO     OO O
-4O O  O O   O  O  O O OOO  O O  OOO    O OO O   O  
-4O  OOOO O O O     OOOOOO OOO OOO OO O OO   O  O O 
-4OO OO  O   OOOOO O OOO OO  O   OO   O O O OOOOOOO 
-4O O  O  OO  OOOO O  OOO O O OO     O O OOO  OO  O 
-4OO   OO O  OOO OOO  O OO OOO    OO OO O O  O O  OO
-4O     OOOO O   O O OOOO OO  O OO    O O   OOO OO  
-4 O OOOO O  OO  O   O  O   OOO OO   OO OO        O 
-4OO   O  OOOO  OO OOO OO   O  O      O OO O   OOO O
-4OO O OO O O O O OO      O   OO  OO  OOOO O O O  O 
-4OOOO  O     OO  O  O  OOOOO OO   O O  O O OOO  OO 
-4OOO OOOOOOO  O O O O OO      OO OOOOOOOO O OO O  O
-4OO  O O  O O O OOOO OOOOO  OOO     OOO      OO  O 
-4 O      O OOOOO  O OO O O   O   O  OO OO OO OO  OO
-4O      O OO OO  OOOO OO O O   OOO      O     O    
-4O       OOOO O OO OO OO OO OO    OO OOO   O   OOO 
-4OO O O    OOO   OOOOO O O OO OOOO O O    O   O   O
-4 O OO O   O  OO  OOOO   O O OOO   O    OOOO O OO O
-4   O   O OOO OO O OOO   OOOO  OO   OOOO O O  OOO  
-4  O  OO    OOOOOOO O O  O OO  O   O OO OO   O     
-4OO O O  OOO O O     O   O    OOOO O OOO  OO O OOOO
-4O OOO    OOO  OO  OO   O   O  O OO OOO  OO OO  OO 
-4OOOOOOOOO O    OOOO  O  O OO  OO   OO O OO OOOO OO
-4    OOO O OO O     O OOOO   OO OO  OOOO O O   O   
-4 OOOOOOOOO OOOOOOO O     OOOO O O OOO OOOO O O OOO
-4   O OO O  OO  O OO OOO  OOO       O  O  O OO  O  
+> 64 0 512
+B                                                        OO      
+B                          OO                           O  O   O 
+B                         O  O                           OO    O 
+B                          O O                                 O 
+B             OO            O                                    
+B             O O                           O                    
+B              O                            O                    
+B                                           O                    
+B                 OO                                             
+B                 OO                    OOO                      
+B                                                                
+B       OO                                  O                    
+B       OO                                  O                    
+B                                           O                    
+B                                                                
+B                                                                
+B                                                OO              
+B                 O                              OO          O   
+B                 O                                         O O  
+B                 O                                         O  O 
+B                                                            OO  
+B                                                                
+B                                                                
+B                                                                
+B                                                                
+B                                                                
+B                                                                
+B                                      OO                        
+B                                     O  O                       
+B                                      O O                       
+B                                       O                        
+B                                                                
+B                                                                
+B                              O                                 
+B                             O O                                
+B                             OO                                 
+B     OOO          O                                             
+B                  O                    OO                       
+B                  O                    OO                       
+B                                                                
+B                                                                
+B                                                                
+B                                                     O          
+B      OO                                            O O         
+B      OO                     OO                     O O         
+B                            O  O                     O          
+B                             OO                                 
+B          OO                                                    
+B          OO                                                    
+B                                                                
+B                                            O                   
+B                                  OO        O                   
+B                                  OO    O   O                   
+B                       OO               O                       
+B                       OO               O                       
+B                                                                
+B                                                       OO       
+B                                                O      OO       
+B                                               O O              
+B                                               O O              
+B       OO                                       O               
+B       OO                                                       
+B                                                                
+B                                                                

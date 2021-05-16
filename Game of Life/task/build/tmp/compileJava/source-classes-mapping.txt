@@ -1,4 +1,6 @@
-life/Main.java
- life.Main
 life/Cell.java
  life.Cell
+life/GameOfLife.java
+ life.GameOfLife
+life/Main.java
+ life.Main
