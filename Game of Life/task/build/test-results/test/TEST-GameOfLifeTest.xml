@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GameOfLifeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-16T00:32:31" hostname="DESKTOP-DELNEO3" time="0.464">
+<testsuite name="GameOfLifeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-17T20:06:55" hostname="DESKTOP-DELNEO3" time="0.904">
   <properties/>
-  <testcase name="start" classname="GameOfLifeTest" time="0.464"/>
+  <testcase name="start" classname="GameOfLifeTest" time="0.904"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 > 4 4 0

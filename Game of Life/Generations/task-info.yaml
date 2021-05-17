@@ -213,9 +213,12 @@ files:
 - name: src/life/GameOfLife.java
   visible: true
   learner_created: true
+- name: src/life/Generation.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/54/stages/295/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sun, 16 May 2021 00:32:31 UTC
-record: -1
+  time: Mon, 17 May 2021 20:06:56 UTC
+record: 2
