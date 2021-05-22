@@ -2,7 +2,8 @@ package life;
 
 public class Main {
     public static void main(String[] args) {
-        GameOfLife game = new GameOfLife();
-        game.start();
+        //Game game = new Game();
+        GameOfLife gameOfLife = new GameOfLife();
+        //game.start();
     }
 }

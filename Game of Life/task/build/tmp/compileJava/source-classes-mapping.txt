@@ -1,7 +1,7 @@
-life/Cell.java
- life.Cell
 life/Generation.java
  life.Generation
+life/Cell.java
+ life.Cell
 life/GameOfLife.java
  life.GameOfLife
 life/Main.java

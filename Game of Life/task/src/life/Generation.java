@@ -1,6 +1,6 @@
 package life;
 
-public class Generation {
+public class Generation{
     private Cell[][] universe;
     private Cell[][] nextGen;
     private int size;
