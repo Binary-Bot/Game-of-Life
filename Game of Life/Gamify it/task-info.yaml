@@ -390,5 +390,8 @@ files:
     \ \" + aliveNum);\n    }\n}\n"
   learner_created: true
 feedback_link: https://hyperskill.org/projects/54/stages/299/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 23 May 2021 22:32:30 UTC
 record: -1

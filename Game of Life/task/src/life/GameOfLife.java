@@ -1,7 +1,6 @@
 package life;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class GameOfLife extends JFrame {
     GoLView view;

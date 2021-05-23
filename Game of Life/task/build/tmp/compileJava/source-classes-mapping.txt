@@ -6,6 +6,8 @@ life/GameOfLife.java
  life.GameOfLife
 life/GoLView.java
  life.GoLView
+ life.GoLView$1
+ life.GoLView$2
 life/GameLogic.java
  life.GameLogic
 life/GoLController.java

@@ -12,22 +12,24 @@ import java.util.Random;
 public class GoLView extends JPanel {
     private JLabel GenerationLabel;
     private JLabel AliveLabel;
-    private JButton pause;
+    private JToggleButton pause;
     private JButton reset;
     private Cell[][] cellViews;
     private GoLController controller;
+    private JPanel jp;
+    private Random random;
     private boolean state;
     private final static int rows = 20;
     private final static int cols = 20;
 
     public GoLView() {
-        Random random = new Random(4);
+        random = new Random(4);
         state = true;
         cellViews = new Cell[rows][cols];
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(590, 590));
 
-        JPanel jp = new JPanel();
+        jp = new JPanel();
         jp.setLayout(new GridLayout(rows, cols));
         jp.setBounds(new Rectangle(200, 200));
         for (int i = 0; i < rows; ++i){
@@ -42,7 +44,8 @@ public class GoLView extends JPanel {
         funcPanel.setLayout(new FlowLayout());
         funcPanel.setPreferredSize(new Dimension(200, 200));
 
-        pause = new JButton("Play/Pause");
+        pause = new JToggleButton("Play/Pause");
+        pause.setName("PlayToggleButton");
         pause.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,10 +56,12 @@ public class GoLView extends JPanel {
         funcPanel.add(pause);
 
         reset = new JButton("Reset");
+        reset.setName("ResetButton");
         reset.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                controller.reset();
+                updateCells();
             }
         });
         funcPanel.add(reset);
@@ -89,5 +94,13 @@ public class GoLView extends JPanel {
 
     public void setAliveNum(int aliveNum) {
         this.AliveLabel.setText(" Alive: " + aliveNum);
+    }
+
+    private void updateCells() {
+        for (int i = 0; i < rows; ++i){
+            for (int j = 0; j < cols; ++j){
+                jp.add(cellViews[i][j]);
+            }
+        }
     }
 }

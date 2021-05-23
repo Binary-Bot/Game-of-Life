@@ -21,4 +21,8 @@ public class GoLController {
     public void toggle(boolean state) {
         game.setRunning(state);
     }
+
+    public void reset() {
+        game.setNewUniverse();
+    }
 }

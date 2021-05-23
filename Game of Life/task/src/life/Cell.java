@@ -11,6 +11,11 @@ public class Cell extends JLabel {
         repaint();
     }
 
+    public void setState(boolean state) {
+        this.state = state;
+        repaint();
+    }
+
     public boolean isAlive(){
         return state;
     }

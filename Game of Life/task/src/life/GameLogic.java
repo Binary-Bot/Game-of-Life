@@ -1,6 +1,7 @@
 package life;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class GameLogic implements Runnable{
     private Cell[][] universe;
@@ -114,5 +115,16 @@ public class GameLogic implements Runnable{
 
     public void setRunning(boolean state) {
         running = state;
+    }
+
+    public void setNewUniverse() {
+        Random random = new Random();
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j < size; ++j) {
+                universe[i][j].setState(random.nextBoolean());
+            }
+        }
+        genNum = 1;
+        controller.update(universe, genNum, checkAliveCells());
     }
 }
