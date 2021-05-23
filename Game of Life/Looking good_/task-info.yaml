@@ -80,30 +80,6 @@ files:
         }
     }
   learner_created: false
-- name: src/life/Generation.java
-  visible: true
-  text: "package life;\n\npublic class Generation{\n    private Cell[][] universe;\n\
-    \    private Cell[][] nextGen;\n    private int size;\n\n    public Generation(int\
-    \ size, Cell[][] universe){\n        this.size = size;\n        this.universe\
-    \ = copy(universe);\n        \n    }\n\n    public void findNextGeneration(){\n\
-    \        nextGen = copy(universe);\n        for (int i = 0; i < universe.length;\
-    \ i++) {\n            for (int j = 0; j < universe.length; j++) {\n          \
-    \      nextGen[i][j].determineState(getNeighbourCells(i, j));\n            }\n\
-    \        }\n        universe = copy(nextGen);\n    }\n\n    private int getNeighbourCells(int\
-    \ r, int c) {\n        int count = 0;\n        for (int i = r - 1; i < r + 2;\
-    \ ++i) {\n            for (int j = c - 1; j < c + 2; ++j) {\n                if\
-    \ (universe[adjustBounds(i)][adjustBounds(j)].getState().equals(\"O\")) {\n  \
-    \                  if (!(i == r && j == c)) {\n                        count++;\n\
-    \                    }\n                }\n            }\n        }\n        return\
-    \ count;\n    }\n\n    private int adjustBounds(int n) {\n        int i;\n   \
-    \     if (n > size - 1) i = 0;\n        else if (n < 0) i = size - 1;\n      \
-    \  else i = n;\n        return i;\n    }\n\n    public Cell[][] copy(Cell[][]\
-    \ array) {\n        Cell[][] copiedArray = new Cell[array.length][array.length];\n\
-    \        for (int i = 0; i < array.length; i++) {\n            for (int j = 0;\
-    \ j < array.length; j++) {\n                copiedArray[i][j] = new Cell(array[i][j].isAlive());\n\
-    \            }\n        }\n        return copiedArray;\n    }\n\n    public Cell[][]\
-    \ getNextGen(){\n        return nextGen;\n    }\n}\n"
-  learner_created: true
 - name: src/life/Cell.java
   visible: true
   text: |
@@ -146,7 +122,16 @@ files:
         }
     }
   learner_created: true
-- name: src/life/Game.java
+- name: src/life/GameOfLife.java
+  visible: true
+  learner_created: true
+- name: src/life/GoLView.java
+  visible: true
+  learner_created: true
+- name: src/life/GoLController.java
+  visible: true
+  learner_created: true
+- name: src/life/GameLogic.java
   visible: true
   text: |
     package life;
@@ -230,15 +215,9 @@ files:
         }
     }
   learner_created: true
-- name: src/life/GameOfLife.java
-  visible: true
-  learner_created: true
-- name: src/life/GoLView.java
-  visible: true
-  learner_created: true
-- name: src/life/CellView.java
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/54/stages/298/implement#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 23 May 2021 17:34:53 UTC
+record: 4

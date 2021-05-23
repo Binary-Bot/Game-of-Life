@@ -1,17 +1,14 @@
 package life;
 
-public class Cell {
+import javax.swing.*;
+import java.awt.*;
+
+public class Cell extends JLabel {
     private boolean state;
 
     public Cell(boolean state){
         this.state = state;
-    }
-
-    public String getState(){
-        if (state){
-            return "O";
-        }
-        return " ";
+        repaint();
     }
 
     public boolean isAlive(){
@@ -27,6 +24,18 @@ public class Cell {
             if (neighborCells == 3){
                 this.state = true;
             }
+        }
+        repaint();
+    }
+
+    public void paint(Graphics g) {
+        super.paint(g);
+        g.setColor(Color.BLACK);
+        if (this.isAlive()) {
+            g.fillRect(0,0,100,100);
+        } else {
+            g.drawRect(0, 0, 100, 100);
+
         }
     }
 }

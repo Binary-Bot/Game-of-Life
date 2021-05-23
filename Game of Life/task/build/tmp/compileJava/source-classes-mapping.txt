@@ -1,8 +1,12 @@
-life/Generation.java
- life.Generation
 life/Cell.java
  life.Cell
-life/GameOfLife.java
- life.GameOfLife
 life/Main.java
  life.Main
+life/GameOfLife.java
+ life.GameOfLife
+life/GoLView.java
+ life.GoLView
+life/GameLogic.java
+ life.GameLogic
+life/GoLController.java
+ life.GoLController

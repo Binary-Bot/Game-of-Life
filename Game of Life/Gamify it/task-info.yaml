@@ -148,6 +148,247 @@ files:
         }
     }
   learner_created: false
+- name: src/life/GameLogic.java
+  visible: true
+  text: |
+    package life;
+
+    import java.io.IOException;
+
+    public class GameLogic implements Runnable{
+        private Cell[][] universe;
+        private Cell[][] nextGen;
+        private Thread thread;
+        private GoLController controller;
+        private int genNum;
+        private final static int size = 20;
+
+        public GameLogic() {
+            universe = new Cell[size][size];
+        }
+
+        public void addController(GoLController controller){ this.controller = controller;}
+
+        public void setUniverse(Cell[][] universe) {
+            this.universe = universe;
+            start();
+        }
+
+        public void start() {
+            if (thread == null) {
+                thread = new Thread(this);
+                thread.start();
+            }
+        }
+
+        private void findGeneration() {
+            genNum = 1;
+            //showUniverse(universe);
+            while (true) {
+                try {
+                    Thread.sleep(1000);
+                    nextGen = copy(universe);
+                    for (int i = 0; i < universe.length; i++) {
+                        for (int j = 0; j < universe.length; j++) {
+                            universe[i][j].determineState(getNeighbourCells(i, j));
+                        }
+                    }
+                    //showUniverse(universe);
+                    genNum++;
+                    controller.update(universe, genNum, checkAliveCells());
+                    //clear();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        private int getNeighbourCells(int r, int c) {
+            int count = 0;
+            for (int i = r - 1; i < r + 2; ++i) {
+                for (int j = c - 1; j < c + 2; ++j) {
+                    if (nextGen[adjustBounds(i)][adjustBounds(j)].isAlive()) {
+                        if (!(i == r && j == c)) {
+                            count++;
+                        }
+                    }
+                }
+            }
+            return count;
+        }
+
+        private void showUniverse(Cell[][] array){
+            for(int i = 0; i < universe.length; ++i){
+                for(int j = 0; j < universe.length; ++j){
+                    if (array[i][j].isAlive()){
+                        System.out.print("O");
+                    } else { System.out.print(" ");}
+                }
+                System.out.println();
+            }
+        }
+
+        private int adjustBounds(int n) {
+            int i;
+            if (n > size - 1) i = 0;
+            else if (n < 0) i = size - 1;
+            else i = n;
+            return i;
+        }
+
+        public Cell[][] copy(Cell[][] array) {
+            Cell[][] copiedArray = new Cell[array.length][array.length];
+            for (int i = 0; i < array.length; i++) {
+                for (int j = 0; j < array.length; j++) {
+                    copiedArray[i][j] = new Cell(array[i][j].isAlive());
+                }
+            }
+            return copiedArray;
+        }
+
+        private int checkAliveCells(){
+            int count = 0;
+            for (Cell[] cells : universe) {
+                for (int j = 0; j < universe.length; j++) {
+                    if (cells[j].isAlive()){
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        @Override
+        public void run() {
+            findGeneration();
+        }
+    }
+  learner_created: true
+- name: src/life/GameOfLife.java
+  visible: true
+  text: |
+    package life;
+
+    import javax.swing.*;
+    import java.awt.*;
+
+    public class GameOfLife extends JFrame {
+        GoLView view;
+        GameLogic game;
+        GoLController controller;
+
+        public GameOfLife() {
+            setTitle("Game of Life");
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            setSize(350, 350);
+
+            view = new GoLView();
+            game = new GameLogic();
+            controller = new GoLController(view, game);
+
+            this.getContentPane().add(view);
+            pack();
+            setVisible(true);
+        }
+    }
+  learner_created: true
+- name: src/life/Cell.java
+  visible: true
+  text: |
+    package life;
+
+    import javax.swing.*;
+    import java.awt.*;
+
+    public class Cell extends JLabel {
+        private boolean state;
+
+        public Cell(boolean state){
+            this.state = state;
+            repaint();
+        }
+
+        public boolean isAlive(){
+            return state;
+        }
+
+        public void determineState(int neighborCells){
+            if (this.isAlive()){
+                if (neighborCells < 2 || neighborCells > 3){
+                    this.state = false;
+                }
+            } else {
+                if (neighborCells == 3){
+                    this.state = true;
+                }
+            }
+            repaint();
+        }
+
+        public void paint(Graphics g) {
+            super.paint(g);
+            g.setColor(Color.BLACK);
+            if (this.isAlive()) {
+                g.fillRect(0,0,100,100);
+            } else {
+                g.drawRect(0, 0, 100, 100);
+
+            }
+        }
+    }
+  learner_created: true
+- name: src/life/GoLController.java
+  visible: true
+  text: |
+    package life;
+
+    public class GoLController {
+        private GoLView view;
+        private GameLogic game;
+
+        public GoLController(GoLView view, GameLogic game) {
+            this.view = view;
+            this.game = game;
+            game.setUniverse(view.getCellViews());
+            this.view.addController(this);
+            this.game.addController(this);
+        }
+
+        public void update(Cell[][] universe, int genNum, int aliveCells) {
+            view.setCellViews(universe);
+            view.setGenerationNum(genNum);
+            view.setAliveNum(aliveCells);
+
+        }
+    }
+  learner_created: true
+- name: src/life/GoLView.java
+  visible: true
+  text: "package life;\n\nimport javax.swing.*;\nimport java.awt.*;\nimport java.util.ArrayList;\n\
+    import java.util.Random;\n\npublic class GoLView extends JPanel {\n    private\
+    \ JLabel GenerationLabel;\n    private JLabel AliveLabel;\n    private Cell[][]\
+    \ cellViews;\n    private GoLController controller;\n    private final static\
+    \ int rows = 20;\n    private final static int cols = 20;\n\n    public GoLView()\
+    \ {\n        Random random = new Random(4);\n        cellViews = new Cell[rows][cols];\n\
+    \        setLayout(new BorderLayout());\n        setPreferredSize(new Dimension(290,\
+    \ 290));\n\n        GenerationLabel = new JLabel(\" Generation #1\");\n      \
+    \  GenerationLabel.setName(\"GenerationLabel\");\n        GenerationLabel.setBackground(Color.GRAY);\n\
+    \        GenerationLabel.setBounds(0, 0, 100, 20);\n        add(GenerationLabel,\
+    \ BorderLayout.NORTH);\n\n        AliveLabel = new JLabel(\" Alive: \");\n   \
+    \     AliveLabel.setName(\"AliveLabel\");\n        AliveLabel.setBackground(Color.GRAY);\n\
+    \        AliveLabel.setBounds(8,8,100,20);\n        add(AliveLabel);\n\n     \
+    \   JPanel jp = new JPanel();\n        jp.setLayout(new GridLayout(rows, cols));\n\
+    \        jp.setBounds(new Rectangle(200, 200));\n        for (int i = 0; i < rows;\
+    \ ++i){\n            for (int j = 0; j < cols; ++j){\n                cellViews[i][j]\
+    \ = new Cell(random.nextBoolean());\n                jp.add(cellViews[i][j]);\n\
+    \            }\n        }\n        this.add(jp);\n\n    }\n\n    public void addController(GoLController\
+    \ controller) {this.controller = controller;}\n\n    public Cell[][] getCellViews(){\
+    \ return cellViews; }\n\n    public void setCellViews(Cell[][] cellViews) { this.cellViews\
+    \ = cellViews;}\n    \n    public void setGenerationNum(int genNum) {\n      \
+    \  this.GenerationLabel.setText(\" Generation #\" + genNum);\n    }\n\n    public\
+    \ void setAliveNum(int aliveNum) {\n        this.AliveLabel.setText(\" Alive:\
+    \ \" + aliveNum);\n    }\n}\n"
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/54/stages/299/implement#comment
 status: Unchecked
 record: -1

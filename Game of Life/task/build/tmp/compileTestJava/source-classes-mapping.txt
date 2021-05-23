@@ -1,4 +1,2 @@
-Generation.java
- Generation
 GameOfLifeTest.java
  GameOfLifeTest
