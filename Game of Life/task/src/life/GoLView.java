@@ -19,11 +19,11 @@ public class GoLView extends JPanel {
     private JPanel jp;
     private Random random;
     private boolean state;
-    private final static int rows = 20;
-    private final static int cols = 20;
+    private final static int rows = 30;
+    private final static int cols = 30;
 
     public GoLView() {
-        random = new Random(4);
+        random = new Random();
         state = true;
         cellViews = new Cell[rows][cols];
         setLayout(new BorderLayout());

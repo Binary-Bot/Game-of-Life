@@ -10,7 +10,7 @@ public class GameLogic implements Runnable{
     private boolean running;
     private GoLController controller;
     private int genNum;
-    private final static int size = 20;
+    private final static int size = 30;
 
     public GameLogic() {
         universe = new Cell[size][size];
@@ -43,7 +43,7 @@ public class GameLogic implements Runnable{
                             universe[i][j].determineState(getNeighbourCells(i, j));
                         }
                     }
-                    showUniverse(universe);
+                    //showUniverse(universe);
                     genNum++;
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -67,16 +67,16 @@ public class GameLogic implements Runnable{
         return count;
     }
 
-    private void showUniverse(Cell[][] array){
-        for(int i = 0; i < universe.length; ++i){
-            for(int j = 0; j < universe.length; ++j){
-                if (array[i][j].isAlive()){
-                    System.out.print("O");
-                } else { System.out.print(" ");}
-            }
-            System.out.println();
-        }
-    }
+//    private void showUniverse(Cell[][] array){
+//        for(int i = 0; i < universe.length; ++i){
+//            for(int j = 0; j < universe.length; ++j){
+//                if (array[i][j].isAlive()){
+//                    System.out.print("O");
+//                } else { System.out.print(" ");}
+//            }
+//            System.out.println();
+//        }
+//    }
 
     private int adjustBounds(int n) {
         int i;
